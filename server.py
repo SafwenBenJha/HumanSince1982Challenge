@@ -1,24 +1,20 @@
-import socket
-import time
-from ip_adress import IPadress
-server_socket = socket.socket()
-server_name = IPadress
-server_port = 149
-server_socket.bind((server_name,server_port))
-server_socket.listen(10)
+from flask import Flask, jsonify, request #import objects from the Flask model
+app = Flask(__name__) #define app using Flask
 
-while True:
+humans = [{'name' : 'Safouan'}, {'name' : 'Ben Jha'}, {'name' : 'Jahjouh'}]
 
-    c , adress = server_socket.accept()
-    print "We got connection from", adress
-    
-    recv = str(c.recv(1024))
-    if  recv == "request_A" :
-    	c.send("command executed succefully")
-    elif recv == "request_B":
-    	c.send("error in command execution")
-    else: 
-    	c.send("server error")
-    time.sleep(2)
-    c.close()
+@app.route('/', methods=['GET'])
+def test():
+    return jsonify({'message' : 'It works!'})
 
+@app.route('/since1982', methods=['GET'])
+def returnAll():
+    return jsonify({'humans' : humans})
+
+@app.route('/since1982/', methods=['GET'])
+def returnOne(name):
+    hums = [human for human in humans if human['name'] == name]
+    return jsonify({'language' : langs[0]})
+
+if __name__ == '__main__':
+    app.run(debug=True, port=8080) #run app on port 8080 in debug mode
