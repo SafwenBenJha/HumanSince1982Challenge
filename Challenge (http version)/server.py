@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, request #import objects from the Flask model
 app = Flask(__name__) #define app using Flask
 
-humans = [{'name' : 'Safouan'}, {'name' : 'Ben Jha'}, {'name' : 'Jahjouh'}]
+humans = [{'name' : 'ls -l'}, {'name' : 'ifconfig'}, {'name' : 'Jahjouh'}]
 
 @app.route('/', methods=['GET'])
 def test():
