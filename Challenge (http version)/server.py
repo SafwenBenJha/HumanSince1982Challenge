@@ -14,7 +14,7 @@ def returnAll():
 @app.route('/since1982/', methods=['GET'])
 def returnOne(name):
     hums = [human for human in humans if human['name'] == name]
-    return jsonify({'language' : langs[0]})
+    return jsonify({'human' : hums[0]})
 
 if __name__ == '__main__':
     app.run(debug=True, port=8080) #run app on port 8080 in debug mode
