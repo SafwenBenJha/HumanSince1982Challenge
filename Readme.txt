@@ -1,27 +1,9 @@
-<<<<<<< HEAD
-Preparations: 
+Hello!
 
--------------------
-*Update:
+The project is made in two versions, one with socket and another with http requests.
 
-apt-get update 
-apt-get upgrade -y
--------------------------------
-*Install python-pip:
+The socket version was made first, and then send to Orion before the deadline.
+Then after receiving only on Monday morning an answer to my first question from David, I could make a second solution, wich was uploaded after the deadline (Monday 03pm).
 
-apt-get install python-pip
-------------------------------
-*Install Flask:
-
-pip install Flask
-
---------------------------------------
-Run the server via : python server.py
-Then run task.py (the core of the challenge)
-
-ip_adress.py contains just the ip address, it is accessible by anyone even he does not know developement
-=======
-Please run the server first via : sudo python server.py
-Then run the task.py: sudo python task.py
-The ip adress is the file ip_adress.py
->>>>>>> c26ec32721953434c18443a9a70ebd94cfdb67b3
+So Could you please, consider my second solution?
+Thank you for your comprehension.
