@@ -1,1 +1,0 @@
-# HumanSince1982Challenge
